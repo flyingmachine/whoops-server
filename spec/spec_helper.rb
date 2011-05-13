@@ -15,13 +15,24 @@ RSpec.configure do |config|
   # config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
-  config.mock_with :rspec
+  config.mock_with :mocha
+  
+  config.before :suite do
+    connect_to_test_database
+  end
+  
+  config.after(:each) do
+    MongoThing.db.collections.each(&:remove)
+  end
+  
+  config.after :suite do
+    MongoThing.drop_non_system_collections
+  end
+end
 
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
-  # examples within a transaction, remove the following line or assign false
-  # instead of true.
-  config.use_transactional_fixtures = true
+# This is probably a very naive way to do this
+def connect_to_test_database
+  config = File.read(File.join(File.dirname(__FILE__), '../config/mongo.yml'))
+  settings = YAML.load(ERB.new(config).result)
+  MongoThing.connection = settings[:test] unless MongoThing.connection
 end

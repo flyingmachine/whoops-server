@@ -15,10 +15,12 @@ gem 'jquery-rails'
 
 gem 'haml'
 gem 'mongo'
+gem 'bson_ext'
 gem 'json'
-gem "mongo_thing", '0.0.3'
+gem "mongo_thing", '0.0.5'
 
 
 group :test, :development do
   gem "rspec-rails"
+  gem "mocha"
 end
