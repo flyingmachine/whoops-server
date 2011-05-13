@@ -36,3 +36,22 @@ def connect_to_test_database
   settings = YAML.load(ERB.new(config).result)
   MongoThing.connection = settings[:test] unless MongoThing.connection
 end
+
+
+module Whoops
+  module Spec
+    ATTRIBUTES = {
+      :event_params => {
+        :type => "error",
+        :service => "test.service",
+        :environment => "production",
+        :message => "ArgumentError",
+        :identifier => "3r42",
+        :details => {
+          :line => "32",
+          :file => "fail.rb"
+        }
+      }
+    }
+  end
+end

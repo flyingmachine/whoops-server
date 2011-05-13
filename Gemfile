@@ -23,4 +23,5 @@ gem "mongo_thing", '0.0.5'
 group :test, :development do
   gem "rspec-rails"
   gem "mocha"
+  gem 'factory_girl_rails'
 end
