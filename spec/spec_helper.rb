@@ -42,11 +42,12 @@ module Whoops
   module Spec
     ATTRIBUTES = {
       :event_params => {
-        :type => "error",
+        :event_type => "error",
         :service => "test.service",
         :environment => "production",
         :message => "ArgumentError",
         :identifier => "3r42",
+        :time => Time.now.to_s,
         :details => {
           :line => "32",
           :file => "fail.rb"
