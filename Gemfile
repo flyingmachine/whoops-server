@@ -17,7 +17,7 @@ gem 'haml'
 gem 'mongo'
 gem 'bson_ext'
 gem 'json'
-gem "mongo_thing", '0.0.6'
+gem "mongoid", '~> 2.0'
 
 
 group :test, :development do

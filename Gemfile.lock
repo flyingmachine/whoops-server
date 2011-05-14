@@ -65,12 +65,11 @@ GEM
     mocha (0.9.12)
     mongo (1.3.1)
       bson (>= 1.3.1)
-    mongo_thing (0.0.6)
-      activesupport (~> 3)
-      bson
-      bson_ext
-      i18n
-      mongo
+    mongoid (2.0.1)
+      activemodel (~> 3.0)
+      mongo (~> 1.3)
+      tzinfo (~> 0.3.22)
+      will_paginate (~> 3.0.pre)
     multi_json (1.0.2)
     polyglot (0.3.1)
     rack (1.3.0.beta)
@@ -128,6 +127,7 @@ GEM
     uglifier (0.5.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
@@ -141,7 +141,7 @@ DEPENDENCIES
   json
   mocha
   mongo
-  mongo_thing (= 0.0.6)
+  mongoid (~> 2.0)
   rails (= 3.1.0.beta1)
   rspec-rails
   ruby-debug

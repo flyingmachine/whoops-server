@@ -1,16 +1,23 @@
 class Whoops::Event
-  include MongoThing::Document
-  self.properties = [:event_group_id, :details, :event_time]
+  include Mongoid::Document
+  belongs_to :event_group, :class_name => "Whoops::EventGroup"
+  
+  field :details
+  field :event_time, :type => DateTime
   
   def self.record(params)
-    event_group_params = params.slice(*Whoops::EventGroup.properties)
+    params = params.with_indifferent_access
+    event_group_params = params.slice(*Whoops::EventGroup.field_names)
     event_group_params[:last_recorded] = params[:event_time]
     
-    event_group = Whoops::EventGroup.find_one(event_group_params.slice(*Whoops::EventGroup.identifying_properties))
+    event_group = Whoops::EventGroup.first(:conditions => event_group_params.slice(*Whoops::EventGroup.identifying_fields))
     event_group ||= Whoops::EventGroup.create(event_group_params)
         
-    event_params = params.slice(*Whoops::Event.properties)
-    
-    create(event_params.merge(:event_group_id => event_group.id.to_s))
-  end  
+    event_params = params.slice(*Whoops::Event.field_names)
+    event_group.events.create(event_params)
+  end 
+  
+  def self.field_names
+    self.fields.keys
+  end
 end
