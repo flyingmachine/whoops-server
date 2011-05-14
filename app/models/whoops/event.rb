@@ -4,8 +4,9 @@ class Whoops::Event
   
   def self.record(params)
     event_group_params = params.slice(*Whoops::EventGroup.properties)
-
-    event_group = Whoops::EventGroup.find_one(event_group_params.except(:message))
+    event_group_params[:last_recorded] = params[:event_time]
+    
+    event_group = Whoops::EventGroup.find_one(event_group_params.slice(*Whoops::EventGroup.identifying_properties))
     event_group ||= Whoops::EventGroup.create(event_group_params)
         
     event_params = params.slice(*Whoops::Event.properties)

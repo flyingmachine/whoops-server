@@ -21,6 +21,13 @@ describe Whoops::Event do
       event.event_group_id.should == event_group.id.to_s
       event.details.to_hash.should == event_params[:details]
       event.event_time.should == event_params[:event_time]
+      event.event_time.should == event_group.last_recorded
+    end
+    
+    it "should add an event to an existing event group if group identifier matches" do
+      2.times{ Whoops::Event.record(event_params) }
+      event_group = Whoops::EventGroup.find_one
+      Whoops::Event.find(:event_group_id => event_group.id.to_s).size.should == 2
     end
   end
 end
