@@ -28,6 +28,6 @@ describe Whoops::Event do
       2.times{ Whoops::Event.record(event_params) }
       event_group = Whoops::EventGroup.first
       Whoops::Event.where(:event_group_id => event_group.id.to_s).size.should == 2
-    end
+    end    
   end
 end

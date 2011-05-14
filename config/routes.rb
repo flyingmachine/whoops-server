@@ -1,4 +1,9 @@
 Whoops::Application.routes.draw do
+  resources :event_groups do
+    resources :events
+  end
+  
+  root :to => "event_groups#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -35,7 +35,7 @@ module Whoops
         :environment => "production",
         :message => "ArgumentError",
         :identifier => "3r42",
-        :time => Time.now.to_s,
+        :event_time => Time.now.to_s,
         :details => {
           :line => "32",
           :file => "fail.rb"

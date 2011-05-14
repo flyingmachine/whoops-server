@@ -17,12 +17,12 @@ gem 'haml'
 gem 'mongo'
 gem 'bson_ext'
 gem 'json'
-gem "mongoid", '~> 2.0'
+gem "mongoid", :git => "git://github.com/mongoid/mongoid"
 
 
 group :test, :development do
   gem "rspec-rails"
   gem "mocha"
-  gem 'factory_girl_rails'
+  gem "fabrication"
   gem "ruby-debug"
 end
