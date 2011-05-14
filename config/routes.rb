@@ -1,5 +1,5 @@
 Whoops::Application.routes.draw do
-  resources :event_groups do
+  resources :event_groups, :as => "whoops_event_groups" do
     resources :events
   end
   
