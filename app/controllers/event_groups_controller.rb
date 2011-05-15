@@ -1,7 +1,13 @@
 class EventGroupsController < ApplicationController
   before_filter :update_event_group_filter
   def index
-    @event_groups = Whoops::EventGroup.all(:conditions => event_group_filter.to_query_document, :sort => [[:last_recorded_at, :desc]])
+    @event_groups = Whoops::EventGroup.paginate(
+      :conditions => event_group_filter.to_query_document,
+      :sort => [[:last_recorded_at, :desc]],
+      :page => params[:page],
+      :per_page => 20
+    )
+    
     respond_to do |format|
       format.html
       format.js { render :partial => 'list' }

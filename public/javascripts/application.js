@@ -6,7 +6,7 @@ Whoops = {
   },
   
   setupEventLinks: function() {
-    $("#events a").click(function(){
+    $("#events ul a").click(function(){
       $.get(this.href,function(data){
         $("#event-details").html(data)
       }, 'html')
@@ -25,5 +25,5 @@ $(function(){
 })
 
 jQuery.ajaxSetup({ 
-  'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+  beforeSend: function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })

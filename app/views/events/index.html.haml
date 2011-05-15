@@ -8,9 +8,10 @@
         %td= @event_group.send(field)
 
 #event-details
-  = render :partial => "events/details", :object => @event_group.events.first, :as => :event
+  = render :partial => "events/details", :object => @events.first, :as => :event
   
 #events
+  = will_paginate @event, :previous_label => "", :next_label => ""
   %ul
-    - @event_group.events.each do |event|
+    - @events.each do |event|
       %li= link_to event.event_time, event

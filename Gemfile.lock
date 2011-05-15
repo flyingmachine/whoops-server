@@ -144,3 +144,4 @@ DEPENDENCIES
   ruby-debug
   sass
   uglifier
+  will_paginate (~> 3.0.pre2)
