@@ -24,3 +24,6 @@ end
 2.times { Whoops::Event.record(event_params) }
 2.times { Whoops::Event.record(event_params(:identifier => "43149", :message => "Connection Refused"))}
 2.times { Whoops::Event.record(event_params(:service => "data_processor.reconciler"))}
+
+2.times { Whoops::Event.record(event_params(:identifier => "109ca", :message => "FileException", :service => "app.web"))}
+2.times { Whoops::Event.record(event_params(:identifier => "824b3", :service => "app.background"))}

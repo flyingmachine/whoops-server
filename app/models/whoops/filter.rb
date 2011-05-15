@@ -7,6 +7,9 @@ class Whoops::Filter
   end
     
   def to_query_document
-    attributes.except(:_id).delete_if{|k, v| v.blank?}
+    doc = attributes.except(:_id).delete_if{|k, v| v.blank?}
+    # match all services under namespace. ie, if "app" given, match "app.web", "app.backend" etc
+    doc[:service] = /#{doc[:service]}(\..*)?/ if doc[:service]
+    doc
   end
 end
