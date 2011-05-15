@@ -1,9 +1,7 @@
 Whoops = {
   setupFilters: function() {
     $("#new_whoops_filter select").change(function(){
-      $("#new_whoops_filter").ajaxSubmit({
-        target: "#event-list"
-      })
+      $("#new_whoops_filter").submit()
     })
   },
   

@@ -1,7 +1,7 @@
 #filters
   %h2 Filters
   %ul.filter_selects
-    - form_for event_group_filter, :url => whoops_event_groups_path(:format => :js), :html => {:method => "get"} do |f|
+    - form_for event_group_filter, :url => whoops_event_groups_path, :html => {:method => "get"} do |f|
       - filter_options.each do |field_name, options|
         %li= f.select field_name, options_from_collection_for_select(options, :first, :last, event_group_filter.send(field_name))
   
