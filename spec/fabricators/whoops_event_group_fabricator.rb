@@ -4,5 +4,5 @@ Fabricator("Whoops::EventGroup") do
   event_type "error"  
   message "ArgumentError"
   identifier "3r42"
-  last_recorded { rand(300).seconds.ago }
+  last_recorded_at { rand(300).seconds.ago }
 end

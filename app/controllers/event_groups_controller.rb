@@ -8,6 +8,10 @@ class EventGroupsController < ApplicationController
     end
   end
   
+  def show
+    @event_group = Whoops::EventGroup.find(params[:id])
+  end
+  
   def update_event_group_filter
     self.event_group_filter = params[:whoops_filter] if params[:whoops_filter]
   end

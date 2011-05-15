@@ -11,4 +11,4 @@
       %td= link_to event_group.message, event_group
       %td= event_group_scoped_link(event_group, :event_type)
       %td= event_group_scoped_link(event_group, :environment)
-      %td= event_group.last_recorded.to_s
+      %td= event_group.last_recorded_at.to_s

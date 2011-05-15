@@ -21,7 +21,7 @@ describe Whoops::Event do
       event.event_group_id.should == event_group.id
       event.details.should == {"line"=>"32", "file"=>"fail.rb"}
       event.event_time.should == event_params[:event_time]
-      event.event_time.should == event_group.last_recorded
+      event.event_time.should == event_group.last_recorded_at
     end
     
     it "should add an event to an existing event group if group identifier matches" do

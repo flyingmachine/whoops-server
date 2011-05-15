@@ -6,12 +6,12 @@ class Whoops::EventGroup
   [:service, :environment, :event_type, :message, :identifier].each do |string_field|
     field string_field, :type => String
   end
-  field :last_recorded, :type => DateTime
+  field :last_recorded_at, :type => DateTime
   
   has_many :events, :class_name => "Whoops::Event"
   
   def self.identifying_fields
-    field_names - ["message", "last_recorded"]
+    field_names - ["message", "last_recorded_at"]
   end
   
   # @return sorted set of all applicable namespaces

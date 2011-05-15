@@ -10,7 +10,7 @@ class Whoops::Event
   def self.record(params)
     params = params.with_indifferent_access
     event_group_params = params.slice(*Whoops::EventGroup.field_names)
-    event_group_params[:last_recorded] = params[:event_time]
+    event_group_params[:last_recorded_at] = params[:event_time]
     
     event_group = Whoops::EventGroup.first(:conditions => event_group_params.slice(*Whoops::EventGroup.identifying_fields))
     event_group ||= Whoops::EventGroup.create(event_group_params)
