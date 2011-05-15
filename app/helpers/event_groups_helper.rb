@@ -2,7 +2,7 @@ require 'set'
 
 module EventGroupsHelper
   def event_group_scoped_link(event_group, scope)
-    new_filter  = {:filter => event_group_filter.to_query_document.merge(scope => event_group.send(scope))}
+    new_filter  = {:whoops_filter => event_group_filter.to_query_document.merge(scope => event_group.send(scope))}
     link_to(event_group.send(scope), whoops_event_groups_path(new_filter))
   end
   
