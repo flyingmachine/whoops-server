@@ -26,8 +26,7 @@ module EventGroupsHelper
     @filter_options.keys.each do |field_name|
       @filter_options[field_name].compact!
       @filter_options[field_name].sort!{|a, b| a.first <=> b.first}.uniq! if @filter_options[field_name]
-      @filter_options[field_name].unshift(["", "--------"])
-      @filter_options[field_name].unshift(["", field_name.humanize.downcase + " filter"])
+      @filter_options[field_name].unshift(["", "--" + field_name.humanize.downcase + " filter--"])
     end
 
     @filter_options

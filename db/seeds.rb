@@ -13,17 +13,20 @@ def event_params(to_merge = {})
     :environment => "production",
     :message => "ArgumentError",
     :identifier => "3r42",
-    :event_time => rand(300).seconds.ago,
+    :event_time => rand(100000).seconds.ago,
     :details => {
       :line => "32",
       :file => "fail.rb"
     }
   }.merge(to_merge)
 end
+def create_events(to_merge = {})
+  srand
+  (rand(3) + 1).times{ Whoops::Event.record(event_params(to_merge)) }
+end
 
-2.times { Whoops::Event.record(event_params) }
-2.times { Whoops::Event.record(event_params(:identifier => "43149", :message => "Connection Refused"))}
-2.times { Whoops::Event.record(event_params(:service => "data_processor.reconciler"))}
-
-2.times { Whoops::Event.record(event_params(:identifier => "109ca", :message => "FileException", :service => "app.web"))}
-2.times { Whoops::Event.record(event_params(:identifier => "824b3", :service => "app.background"))}
+create_events
+create_events(:identifier => "43149", :message => "Connection Refused")
+create_events(:service => "data_processor.reconciler")
+create_events(:identifier => "109ca", :message => "FileException", :service => "app.web")
+create_events(:identifier => "824b3", :service => "app.background")
