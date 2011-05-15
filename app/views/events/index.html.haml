@@ -1,6 +1,7 @@
 #event-group-details
+  = link_to "Home", root_path
+  
   %h1= @event_group.message
-
   %table
     - [:environment, :event_type, :last_recorded_at].each do |field|
       %tr
