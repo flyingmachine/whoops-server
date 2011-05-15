@@ -1,0 +1,2 @@
+Fabricator(:filter) do
+end

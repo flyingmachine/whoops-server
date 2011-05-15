@@ -1,15 +1,10 @@
-%h1 Events
-%table
-  %tr
-    %th Service
-    %th Message
-    %th Type
-    %th Env
-    %th Time
-  - @event_groups.each do |event_group|
-    %tr
-      %td= event_group_scoped_link(event_group, :service)
-      %td= event_group.message
-      %td= event_group_scoped_link(event_group, :event_type)
-      %td= event_group_scoped_link(event_group, :environment)
-      %td= event_group.last_recorded.to_s
+#filters
+  %h2 Filters
+  %ul.filter_selects
+    - form_for event_group_filter, :url => whoops_event_groups_path(:format => :js), :html => {:method => "get"} do |f|
+      - filter_options.each do |field_name, options|
+        %li= f.select field_name, options_from_collection_for_select(options, :first, :last, event_group_filter.send(field_name))
+  
+#listing
+  %h1 Events
+  = render :partial => 'list'

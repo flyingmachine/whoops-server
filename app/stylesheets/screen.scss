@@ -1,0 +1,53 @@
+// Imports -------------------------------------------------------------------
+
+@import "base";
+@import "compass/reset";
+@import "compass/typography/vertical_rhythm";
+
+// Fonts
+@mixin sans-family {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin serif-family {
+  font-family: Cambria, Georgia, serif;
+}
+
+@mixin monospace-family {
+  font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, Courier, monospace, sans-serif;
+}
+
+
+/* Layout ------------------------------------------------------------------*/
+html {
+  @include establish-baseline;
+  @include serif-family;
+}
+
+h1 {
+  @include adjust-font-size-to(30px)
+}
+
+h2 {
+  @include adjust-font-size-to(24px);
+  @include trailer(1, 24px);
+}
+
+.container {
+  @include container;
+}
+
+#filters {
+  @include alpha;
+  @include columns(3);
+  background:$sub-background;
+}
+
+#listing {
+  @include omega;
+  @include columns(9);
+}
+
+td {
+  padding-right:4px;
+}

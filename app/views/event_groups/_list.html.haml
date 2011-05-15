@@ -1,0 +1,14 @@
+%table#event-list
+  %tr
+    %th Service
+    %th Message
+    %th Type
+    %th Env
+    %th Time
+  - @event_groups.each do |event_group|
+    %tr
+      %td= event_group_scoped_link(event_group, :service)
+      %td= link_to event_group.message, event_group
+      %td= event_group_scoped_link(event_group, :event_type)
+      %td= event_group_scoped_link(event_group, :environment)
+      %td= event_group.last_recorded.to_s

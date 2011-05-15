@@ -1,5 +1,7 @@
 class Whoops::Event
   include Mongoid::Document
+  include FieldNames
+  
   belongs_to :event_group, :class_name => "Whoops::EventGroup"
   
   field :details
@@ -17,7 +19,4 @@ class Whoops::Event
     event_group.events.create(event_params)
   end 
   
-  def self.field_names
-    self.fields.keys
-  end
 end
