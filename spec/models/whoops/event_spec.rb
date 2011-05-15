@@ -20,7 +20,7 @@ describe Whoops::Event do
 
       event.event_group_id.should == event_group.id
       event.details.should == {"line"=>"32", "file"=>"fail.rb"}
-      event.event_time.should == event_params[:event_time]
+      event.event_time.to_s.should == DateTime.parse(event_params[:event_time]).to_s
       event.event_time.should == event_group.last_recorded_at
     end
     
