@@ -1,12 +1,16 @@
-%h1= @event_group.message
+#event-group-details
+  %h1= @event_group.message
 
-%table
-  - [:environment, :event_type, :last_recorded_at].each do |field|
-    %tr
-      %td.field_name= field.to_s.humanize
-      %td= @event_group.send(field)
+  %table
+    - [:environment, :event_type, :last_recorded_at].each do |field|
+      %tr
+        %td.field_name= field.to_s.humanize
+        %td= @event_group.send(field)
 
-%h2 Instances
-%ul
-  - @event_group.events.each do |event|
-    %li= link_to event.event_time, event
+#event-details
+  = render :partial => "events/details", :object => @event_group.events.first, :as => :event
+  
+#events
+  %ul
+    - @event_group.events.each do |event|
+      %li= link_to event.event_time, event

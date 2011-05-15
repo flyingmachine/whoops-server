@@ -3,6 +3,7 @@
 @import "base";
 @import "compass/reset";
 @import "compass/typography/vertical_rhythm";
+@import "compass/layout/stretching";
 
 // Fonts
 @mixin sans-family {
@@ -50,4 +51,25 @@ h2 {
 
 td {
   padding-right:4px;
+}
+
+#event-group-details {
+  @include full;
+  
+}
+
+#event-details {
+  @include alpha;
+  @include columns(10);
+  .details {
+    padding:$gutter-width;
+    border:1px dashed #ccc;
+    white-space: pre;
+    overflow-x:auto;
+  }
+}
+
+#events {
+  @include omega;
+  @include columns(2);
 }

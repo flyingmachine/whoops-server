@@ -27,4 +27,5 @@ group :test, :development do
   gem 'mocha'
   gem 'fabrication'
   gem 'ruby-debug'
+  gem 'faker'
 end

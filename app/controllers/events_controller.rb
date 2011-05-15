@@ -3,6 +3,10 @@ class EventsController < ApplicationController
   end
   
   def show
+    @event = Whoops::Event.find(params[:id])
+    respond_to do |format|
+      format.js { render :partial => 'details', :object => @event, :as => :event}
+    end
   end
   
   # TODO break this out into a more metal-y controller

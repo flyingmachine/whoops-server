@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+require 'faker'
 
 def event_params(to_merge = {})
   {
@@ -16,7 +17,11 @@ def event_params(to_merge = {})
     :event_time => rand(100000).seconds.ago,
     :details => {
       :line => "32",
-      :file => "fail.rb"
+      :file => "fail.rb",
+      :environment => {
+        :host => Faker::Internet.domain_name,
+        :port => "80"
+      }
     }
   }.merge(to_merge)
 end
