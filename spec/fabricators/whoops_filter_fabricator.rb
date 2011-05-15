@@ -1,2 +1,2 @@
-Fabricator(:filter) do
+Fabricator("Whoops::Filter") do
 end

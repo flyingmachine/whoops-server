@@ -13,4 +13,18 @@ class Whoops::EventGroup
   def self.identifying_fields
     field_names - ["message", "last_recorded"]
   end
+  
+  # @return sorted set of all applicable namespaces
+  def self.services
+    services = SortedSet.new
+    previous_service = []
+    all(:sort => [[:service, :asc]]).each do |group|
+      services << group.service
+      split = group.service.split(".")
+      common = (previous_service & split)
+      services << common.join(".") unless common.blank?
+      previous_service = split
+    end
+    services
+  end
 end
