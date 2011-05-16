@@ -170,3 +170,8 @@ td {
   width: 14.754%;
   margin-right: 1.639%;
 }
+
+/* line 77, ../../app/stylesheets/screen.scss */
+.space {
+  margin: 27px 1em;
+}

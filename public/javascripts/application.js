@@ -3,6 +3,10 @@ Whoops = {
     $("#new_whoops_filter select").change(function(){
       $("#new_whoops_filter").submit()
     })
+    $("#reset").click(function(){
+      window.location = "/?whoops_filter[service]"
+      return false
+    })
   },
   
   setupEventLinks: function() {

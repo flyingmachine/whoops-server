@@ -73,3 +73,7 @@ td {
   @include omega;
   @include columns(2);
 }
+
+.space {
+  margin:$base-line-height $gutter-width;
+}
