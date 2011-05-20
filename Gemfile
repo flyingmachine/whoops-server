@@ -21,6 +21,7 @@ gem 'bson_ext'
 gem 'json'
 gem 'mongoid'
 gem "will_paginate", "~> 3.0.pre2"
+gem 'barista'
 
 
 group :test, :development do

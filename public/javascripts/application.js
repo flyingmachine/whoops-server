@@ -11,6 +11,8 @@ Whoops = {
   
   setupEventLinks: function() {
     $("#instances a").click(function(){
+      $(".selected").removeClass("selected")
+      $(this).parents("li").addClass("selected")
       $.get(this.href,function(data){
         $("#event-details").html(data)
       }, 'html')

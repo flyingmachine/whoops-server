@@ -2,8 +2,8 @@
   %h3 instances
   = will_paginate @event, :previous_label => "", :next_label => ""
   %ul#instances
-    - @events.each do |event|
-      %li= link_to event.event_time, event
+    - @events.each_with_index do |event, index|
+      %li{:class => ("selected" if index == 0)}= link_to event.event_time, event
 
 %article.module.width_full
   %header
