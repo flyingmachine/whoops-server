@@ -1,3 +1,5 @@
+@import "compass/utilities/general/clearfix";
+
 /* Essentials */
 
 html, div, map, dt, isindex, form, header, aside, section, section, article, footer {  
@@ -200,15 +202,6 @@ min-height: 500px;
 margin-top: -4px;
 }
 
-#sidebar hr {
-border: none;
-outline: none;
-background: url(../images/_ui/sidebar_divider.png) repeat-x;
-display: block;
-width: 100%;
-height: 2px;}
-
-
 /* Search */
 
 .quick_search {
@@ -243,15 +236,41 @@ box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
 
 /* Sidebar Menu */
 
-#sidebar h3 {
-color: #1F1F20;
-text-transform: uppercase;
-text-shadow: 0 1px 0 #fff;
-font-size: 13px;
-margin: 10px 0 10px 6%;
-display: block;
-float: left;
-width: 90%;
+#sidebar {
+  h3 {
+    color: #1F1F20;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 13px;
+    margin: 10px 0 10px 6%;
+    display: block;
+    width: 90%;
+  }
+  .pagination {
+    display:block;
+    font-size:13px;
+    margin:0 0 2px 12%;
+    @include clearfix;
+    a, em {
+      float:left;
+      display:block;
+      padding: 1px 6px;
+    }
+    a:hover, em {
+      background:white;
+    }
+    .previous_page, .next_page {
+      display:none;
+    }
+  }
+  hr {
+    border: none;
+    outline: none;
+    background: url(../images/_ui/sidebar_divider.png) repeat-x;
+    display: block;
+    width: 100%;
+    height: 2px;
+  }
 }
 
 .toggleLink {

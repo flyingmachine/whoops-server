@@ -1,5 +1,5 @@
 - content_for :sidebar do
-  %h3 instances
+  %h3 Instances
   = will_paginate @event, :previous_label => "", :next_label => ""
   %ul#instances
     - @events.each_with_index do |event, index|
