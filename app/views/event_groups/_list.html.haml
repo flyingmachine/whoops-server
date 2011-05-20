@@ -1,11 +1,13 @@
 = will_paginate(@event_groups)
-%table#event-list
-  %tr
-    %th Service
-    %th Message
-    %th Type
-    %th Env
-    %th Last Occurrence
+%table.event-group-list
+  %thead
+    %tr
+      %th.header Service
+      %th.header Message
+      %th.header Type
+      %th.header Env
+      %th.header Last Occurrence
+      %th.header
   - @event_groups.each do |event_group|
     %tr
       %td= event_group_scoped_link(event_group, :service)

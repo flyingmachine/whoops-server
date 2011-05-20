@@ -1,18 +1,22 @@
-#event-group-details
-  = link_to "Home", root_path
-  
-  %h1= @event_group.message
+- content_for :sidebar do
+  %h3 instances
+  = will_paginate @event, :previous_label => "", :next_label => ""
+  %ul#instances
+    - @events.each do |event|
+      %li= link_to event.event_time, event
+
+%article.module.width_full
+  %header
+    %h3= @event_group.message
   %table
     - [:environment, :event_type, :last_recorded_at].each do |field|
       %tr
         %td.field_name= field.to_s.humanize
         %td= @event_group.send(field)
 
-#event-details
-  = render :partial => "events/details", :object => @events.first, :as => :event
-  
-#events
-  = will_paginate @event, :previous_label => "", :next_label => ""
-  %ul
-    - @events.each do |event|
-      %li= link_to event.event_time, event
+%article.module.width_full
+  %header
+    %h3 Details
+  #event-details
+    = render :partial => "events/details", :object => @events.first, :as => :event
+

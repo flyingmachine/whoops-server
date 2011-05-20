@@ -6,11 +6,35 @@
     /[if IE]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
 
-    %script{:src => "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.2.min.js", :type => "text/javascript"}  
-    = javascript_include_tag 'jquery.form.js', 'application.js'
+    = javascript_include_tag 'jquery-1.5.2.min', 'jquery.equalHeight', 'jquery.tablesorter.min', 'application.js'
     = yield :extra_javascripts
     = csrf_meta_tag
   %body
-    .container
+    %header#header
+      %hgroup
+        %h1.site_title
+          = link_to "Whoops", root_path
+        %h2.section_title 
+
+    / end of header bar
+    %section#secondary_bar
+      .user
+      .breadcrumbs_container
+        %article.breadcrumbs/
+        %a{:href => "index.html"} Website Admin
+        .breadcrumb_divider
+        %a.current Dashboard
+    / end of secondary bar
+    %aside#sidebar.column
+      = yield :sidebar
+      %footer
+        %hr/
+        %p
+          %strong Whoops!
+
+    / end of sidebar
+    %section#main.column
       = yield
-      #footer
+      / end of styles article
+      .spacer
+  
