@@ -5,6 +5,7 @@ class Whoops::Event
   belongs_to :event_group, :class_name => "Whoops::EventGroup"
   
   field :details
+  field :message
   field :event_time, :type => DateTime
   
   def self.record(params)

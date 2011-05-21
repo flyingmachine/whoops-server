@@ -1,1 +1,5 @@
-%pre.details= JSON.pretty_generate(JSON.parse(event.details.to_json))
+%table.details
+  - event.details.to_a.sort{|a,b| a[0] <=> b[0]}.each do |detail|
+    %tr
+      %td.label= detail.first
+      %td= format_detail(detail.last)

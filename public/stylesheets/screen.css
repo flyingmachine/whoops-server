@@ -458,14 +458,13 @@ section#main {
 /* line 398, ../../app/stylesheets/screen.scss */
 #main h3 {
   color: #1F1F20;
-  text-transform: uppercase;
   text-shadow: 0 1px 0 #fff;
   font-size: 13px;
   margin: 8px 20px;
 }
 
 /* Modules */
-/* line 408, ../../app/stylesheets/screen.scss */
+/* line 407, ../../app/stylesheets/screen.scss */
 .module {
   border: 1px solid #9BA0AF;
   width: 100%;
@@ -477,14 +476,14 @@ section#main {
   background: #ffffff;
 }
 
-/* line 419, ../../app/stylesheets/screen.scss */
+/* line 418, ../../app/stylesheets/screen.scss */
 #main .module header h3 {
   display: block;
   width: 90%;
   float: left;
 }
 
-/* line 425, ../../app/stylesheets/screen.scss */
+/* line 424, ../../app/stylesheets/screen.scss */
 .module header {
   height: 38px;
   width: 100%;
@@ -497,7 +496,7 @@ section#main {
   border-top-right-radius: 5px;
 }
 
-/* line 434, ../../app/stylesheets/screen.scss */
+/* line 433, ../../app/stylesheets/screen.scss */
 .module footer {
   height: 32px;
   width: 100%;
@@ -511,33 +510,33 @@ section#main {
   -webkit-border-bottom-right-radius: 5px;
 }
 
-/* line 444, ../../app/stylesheets/screen.scss */
+/* line 443, ../../app/stylesheets/screen.scss */
 .module_content {
   margin: 10px 20px;
   color: #666;
 }
 
 /* Module Widths */
-/* line 450, ../../app/stylesheets/screen.scss */
+/* line 449, ../../app/stylesheets/screen.scss */
 .width_full {
   width: 95%;
 }
 
-/* line 454, ../../app/stylesheets/screen.scss */
+/* line 453, ../../app/stylesheets/screen.scss */
 .width_half {
   width: 46%;
   margin-right: 0;
   float: left;
 }
 
-/* line 460, ../../app/stylesheets/screen.scss */
+/* line 459, ../../app/stylesheets/screen.scss */
 .width_quarter {
   width: 26%;
   margin-right: 0;
   float: left;
 }
 
-/* line 466, ../../app/stylesheets/screen.scss */
+/* line 465, ../../app/stylesheets/screen.scss */
 .width_3_quarter {
   width: 66%;
   margin-right: 0;
@@ -545,13 +544,13 @@ section#main {
 }
 
 /* Stats Module */
-/* line 474, ../../app/stylesheets/screen.scss */
+/* line 473, ../../app/stylesheets/screen.scss */
 .stats_graph {
   width: 64%;
   float: left;
 }
 
-/* line 479, ../../app/stylesheets/screen.scss */
+/* line 478, ../../app/stylesheets/screen.scss */
 .stats_overview {
   background: #F6F6F6;
   border: 1px solid #ccc;
@@ -562,13 +561,13 @@ section#main {
   border-radius: 5px;
 }
 
-/* line 489, ../../app/stylesheets/screen.scss */
+/* line 488, ../../app/stylesheets/screen.scss */
 .overview_today, .overview_previous {
   width: 50%;
   float: left;
 }
 
-/* line 493, ../../app/stylesheets/screen.scss */
+/* line 492, ../../app/stylesheets/screen.scss */
 .stats_overview p {
   margin: 0;
   padding: 0;
@@ -577,21 +576,21 @@ section#main {
   text-shadow: 0 1px 0 #fff;
 }
 
-/* line 500, ../../app/stylesheets/screen.scss */
+/* line 499, ../../app/stylesheets/screen.scss */
 .stats_overview p.overview_day {
   font-size: 12px;
   font-weight: bold;
   margin: 6px 0;
 }
 
-/* line 506, ../../app/stylesheets/screen.scss */
+/* line 505, ../../app/stylesheets/screen.scss */
 .stats_overview p.overview_count {
   font-size: 26px;
   font-weight: bold;
   color: #333333;
 }
 
-/* line 511, ../../app/stylesheets/screen.scss */
+/* line 510, ../../app/stylesheets/screen.scss */
 .stats_overview p.overview_type {
   font-size: 10px;
   color: #999999;
@@ -599,25 +598,25 @@ section#main {
 }
 
 /* Content Manager */
-/* line 517, ../../app/stylesheets/screen.scss */
+/* line 516, ../../app/stylesheets/screen.scss */
 .selected {
   font-weight: bold;
   background: white;
 }
 
-/* line 522, ../../app/stylesheets/screen.scss */
+/* line 521, ../../app/stylesheets/screen.scss */
 table {
   width: 100%;
   margin: -5px 0 0 0;
   border-spacing: 0;
 }
-/* line 527, ../../app/stylesheets/screen.scss */
+/* line 526, ../../app/stylesheets/screen.scss */
 table td {
   margin: 0;
   padding: 15px 10px;
   border-bottom: 1px dotted #ccc;
 }
-/* line 533, ../../app/stylesheets/screen.scss */
+/* line 532, ../../app/stylesheets/screen.scss */
 table thead tr {
   height: 34px;
   background: url(../images/_ui/table_sorter_header.png) repeat-x;
@@ -625,12 +624,12 @@ table thead tr {
   text-indent: 10px;
   cursor: pointer;
 }
-/* line 541, ../../app/stylesheets/screen.scss */
+/* line 540, ../../app/stylesheets/screen.scss */
 table .tablesorter input[type=image] {
   margin-right: 10px;
 }
 
-/* line 546, ../../app/stylesheets/screen.scss */
+/* line 545, ../../app/stylesheets/screen.scss */
 ul.tabs {
   margin: 3px 10px 0 0;
   padding: 0;
@@ -649,7 +648,7 @@ ul.tabs {
   text-shadow: 0 1px 0 #fff;
 }
 
-/* line 562, ../../app/stylesheets/screen.scss */
+/* line 561, ../../app/stylesheets/screen.scss */
 ul.tabs li {
   float: left;
   margin: 0;
@@ -657,7 +656,7 @@ ul.tabs li {
   line-height: 24px;
 }
 
-/* line 568, ../../app/stylesheets/screen.scss */
+/* line 567, ../../app/stylesheets/screen.scss */
 ul.tabs li a {
   text-decoration: none;
   color: #999;
@@ -666,17 +665,17 @@ ul.tabs li a {
   height: 24px;
 }
 
-/* line 576, ../../app/stylesheets/screen.scss */
+/* line 575, ../../app/stylesheets/screen.scss */
 ul.tabs li a:hover {
   color: #44474F;
 }
 
-/* line 580, ../../app/stylesheets/screen.scss */
+/* line 579, ../../app/stylesheets/screen.scss */
 html ul.tabs li.active a {
   color: #44474F;
 }
 
-/* line 584, ../../app/stylesheets/screen.scss */
+/* line 583, ../../app/stylesheets/screen.scss */
 html ul.tabs li.active, html ul.tabs li.active a:hover {
   background: #F1F2F4;
   -webkit-box-shadow: inset 0 2px 3px #818181;
@@ -684,7 +683,7 @@ html ul.tabs li.active, html ul.tabs li.active a:hover {
   box-shadow: inset 0 2px 3px #818181;
 }
 
-/* line 591, ../../app/stylesheets/screen.scss */
+/* line 590, ../../app/stylesheets/screen.scss */
 html ul.tabs li:first-child, html ul.tabs li:first-child a {
   -webkit-border-top-left-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -694,7 +693,7 @@ html ul.tabs li:first-child, html ul.tabs li:first-child a {
   border-bottom-left-radius: 5px;
 }
 
-/* line 597, ../../app/stylesheets/screen.scss */
+/* line 596, ../../app/stylesheets/screen.scss */
 html ul.tabs li:last-child, html ul.tabs li:last-child a {
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
@@ -704,7 +703,7 @@ html ul.tabs li:last-child, html ul.tabs li:last-child a {
   border-bottom-right-radius: 5px;
 }
 
-/* line 603, ../../app/stylesheets/screen.scss */
+/* line 602, ../../app/stylesheets/screen.scss */
 #main .module header h3.tabs_involved {
   display: block;
   width: 60%;
@@ -712,12 +711,12 @@ html ul.tabs li:last-child, html ul.tabs li:last-child a {
 }
 
 /* Messages */
-/* line 611, ../../app/stylesheets/screen.scss */
+/* line 610, ../../app/stylesheets/screen.scss */
 .message {
   border-bottom: 1px dotted #cccccc;
 }
 
-/* line 615, ../../app/stylesheets/screen.scss */
+/* line 614, ../../app/stylesheets/screen.scss */
 input[type=submit] {
   background: #d0d1d4 url(../images/_ui/btn_submit.png) repeat-x;
   border: 1px solid #A8A9A8;
@@ -735,12 +734,12 @@ input[type=submit] {
   cursor: pointer;
 }
 
-/* line 632, ../../app/stylesheets/screen.scss */
+/* line 631, ../../app/stylesheets/screen.scss */
 input[type=submit]:hover {
   color: #333333;
 }
 
-/* line 636, ../../app/stylesheets/screen.scss */
+/* line 635, ../../app/stylesheets/screen.scss */
 input[type=submit].alt_btn {
   background: #d0d1d4 url(../images/_ui/btn_submit_2.png) repeat-x;
   border: 1px solid#30B0C8;
@@ -758,12 +757,12 @@ input[type=submit].alt_btn {
   cursor: pointer;
 }
 
-/* line 653, ../../app/stylesheets/screen.scss */
+/* line 652, ../../app/stylesheets/screen.scss */
 input[type=submit].alt_btn:hover {
   color: #001217;
 }
 
-/* line 657, ../../app/stylesheets/screen.scss */
+/* line 656, ../../app/stylesheets/screen.scss */
 input[type=submit].btn_post_message {
   background: #d0d1d4 url(../images/_ui/post_message.png) no-repeat;
   display: block;
@@ -774,18 +773,18 @@ input[type=submit].btn_post_message {
   text-indent: -5000px;
 }
 
-/* line 667, ../../app/stylesheets/screen.scss */
+/* line 666, ../../app/stylesheets/screen.scss */
 input[type=submit].btn_post_message:hover {
   background-position: 0 -24px;
 }
 
-/* line 671, ../../app/stylesheets/screen.scss */
+/* line 670, ../../app/stylesheets/screen.scss */
 .post_message {
   text-align: left;
   padding: 5px 0;
 }
 
-/* line 676, ../../app/stylesheets/screen.scss */
+/* line 675, ../../app/stylesheets/screen.scss */
 .post_message input[type=text] {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -803,7 +802,7 @@ input[type=submit].btn_post_message:hover {
   margin: 0 3.5%;
 }
 
-/* line 693, ../../app/stylesheets/screen.scss */
+/* line 692, ../../app/stylesheets/screen.scss */
 .post_message input[type=text]:focus {
   outline: none;
   border: 1px solid #77BACE;
@@ -813,12 +812,12 @@ input[type=submit].btn_post_message:hover {
   color: #666666;
 }
 
-/* line 702, ../../app/stylesheets/screen.scss */
+/* line 701, ../../app/stylesheets/screen.scss */
 .post_message input[type=image] {
   float: left;
 }
 
-/* line 706, ../../app/stylesheets/screen.scss */
+/* line 705, ../../app/stylesheets/screen.scss */
 .message_list {
   height: 250px;
   overflow-x: hidden;
@@ -826,7 +825,7 @@ input[type=submit].btn_post_message:hover {
 }
 
 /* New/Edit Article Module */
-/* line 714, ../../app/stylesheets/screen.scss */
+/* line 713, ../../app/stylesheets/screen.scss */
 fieldset {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -837,7 +836,7 @@ fieldset {
   margin: 10px 0;
 }
 
-/* line 724, ../../app/stylesheets/screen.scss */
+/* line 723, ../../app/stylesheets/screen.scss */
 fieldset label {
   display: block;
   float: left;
@@ -851,7 +850,7 @@ fieldset label {
   text-transform: uppercase;
 }
 
-/* line 737, ../../app/stylesheets/screen.scss */
+/* line 736, ../../app/stylesheets/screen.scss */
 fieldset input[type=text] {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -871,7 +870,7 @@ fieldset input[type=text] {
   margin: 0 10px;
 }
 
-/* line 756, ../../app/stylesheets/screen.scss */
+/* line 755, ../../app/stylesheets/screen.scss */
 fieldset input[type=text]:focus {
   outline: none;
   border: 1px solid #77BACE;
@@ -880,7 +879,7 @@ fieldset input[type=text]:focus {
   box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
 }
 
-/* line 764, ../../app/stylesheets/screen.scss */
+/* line 763, ../../app/stylesheets/screen.scss */
 fieldset select {
   width: 96%;
   margin: 0 10px;
@@ -889,7 +888,7 @@ fieldset select {
   color: #666666;
 }
 
-/* line 772, ../../app/stylesheets/screen.scss */
+/* line 771, ../../app/stylesheets/screen.scss */
 fieldset textarea {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -908,7 +907,7 @@ fieldset textarea {
   margin: 0 10px;
 }
 
-/* line 790, ../../app/stylesheets/screen.scss */
+/* line 789, ../../app/stylesheets/screen.scss */
 fieldset textarea:focus {
   outline: none;
   border: 1px solid #77BACE;
@@ -917,14 +916,14 @@ fieldset textarea:focus {
   box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
 }
 
-/* line 798, ../../app/stylesheets/screen.scss */
+/* line 797, ../../app/stylesheets/screen.scss */
 .submit_link {
   float: right;
   margin-right: 3%;
   padding: 5px 0;
 }
 
-/* line 804, ../../app/stylesheets/screen.scss */
+/* line 803, ../../app/stylesheets/screen.scss */
 .submit_link select {
   width: 150px;
   border: 1px solid #bbb;
@@ -932,7 +931,7 @@ fieldset textarea:focus {
   color: #666666;
 }
 
-/* line 811, ../../app/stylesheets/screen.scss */
+/* line 810, ../../app/stylesheets/screen.scss */
 #main .module_content h1 {
   color: #333333;
   text-transform: none;
@@ -941,7 +940,7 @@ fieldset textarea:focus {
   margin: 8px 0px;
 }
 
-/* line 819, ../../app/stylesheets/screen.scss */
+/* line 818, ../../app/stylesheets/screen.scss */
 #main .module_content h2 {
   color: #444444;
   text-transform: none;
@@ -950,7 +949,7 @@ fieldset textarea:focus {
   margin: 8px 0px;
 }
 
-/* line 827, ../../app/stylesheets/screen.scss */
+/* line 826, ../../app/stylesheets/screen.scss */
 #main .module_content h3 {
   color: #666666;
   text-transform: uppercase;
@@ -959,7 +958,7 @@ fieldset textarea:focus {
   margin: 8px 0px;
 }
 
-/* line 835, ../../app/stylesheets/screen.scss */
+/* line 834, ../../app/stylesheets/screen.scss */
 #main .module_content h4 {
   color: #666666;
   text-transform: none;
@@ -968,13 +967,13 @@ fieldset textarea:focus {
   margin: 8px 0px;
 }
 
-/* line 843, ../../app/stylesheets/screen.scss */
+/* line 842, ../../app/stylesheets/screen.scss */
 #main .module_content li {
   line-height: 150%;
 }
 
 /* Alerts */
-/* line 849, ../../app/stylesheets/screen.scss */
+/* line 848, ../../app/stylesheets/screen.scss */
 #main h4.alert_info {
   display: block;
   width: 95%;
@@ -992,7 +991,7 @@ fieldset textarea:focus {
   font-size: 14px;
 }
 
-/* line 865, ../../app/stylesheets/screen.scss */
+/* line 864, ../../app/stylesheets/screen.scss */
 #main h4.alert_warning {
   display: block;
   width: 95%;
@@ -1010,7 +1009,7 @@ fieldset textarea:focus {
   font-size: 14px;
 }
 
-/* line 881, ../../app/stylesheets/screen.scss */
+/* line 880, ../../app/stylesheets/screen.scss */
 #main h4.alert_error {
   display: block;
   width: 95%;
@@ -1028,7 +1027,7 @@ fieldset textarea:focus {
   font-size: 14px;
 }
 
-/* line 897, ../../app/stylesheets/screen.scss */
+/* line 896, ../../app/stylesheets/screen.scss */
 #main h4.alert_success {
   display: block;
   width: 95%;
@@ -1044,4 +1043,31 @@ fieldset textarea:focus {
   padding: 10px 0;
   text-indent: 40px;
   font-size: 14px;
+}
+
+/* line 914, ../../app/stylesheets/screen.scss */
+#main table p {
+  margin-top: 0;
+}
+/* line 918, ../../app/stylesheets/screen.scss */
+#main table td.label {
+  width: 120px;
+  font-weight: bold;
+  text-align: right;
+  vertical-align: top;
+}
+/* line 925, ../../app/stylesheets/screen.scss */
+#main table ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 929, ../../app/stylesheets/screen.scss */
+#main table ul li {
+  margin: 0;
+  padding: 0;
+}
+/* line 933, ../../app/stylesheets/screen.scss */
+#main table ul li ul {
+  margin-left: 5px;
 }

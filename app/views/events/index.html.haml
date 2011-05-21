@@ -11,7 +11,7 @@
   %table
     - [:environment, :event_type, :last_recorded_at].each do |field|
       %tr
-        %td.field_name= field.to_s.humanize
+        %td.label= field.to_s.humanize
         %td= @event_group.send(field)
 
 %article.module.width_full
