@@ -236,6 +236,20 @@ box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
 
 /* Sidebar Menu */
 
+.toggleLink {
+color: #999999;
+font-size: 10px;
+text-decoration: none;
+display: block;
+float: right;
+margin-right: 2%
+}
+
+#sidebar .toggleLink:hover {
+color: #77BACE;
+text-decoration: none;
+}
+
 #sidebar {
   h3 {
     color: #1F1F20;
@@ -271,41 +285,34 @@ box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
     width: 100%;
     height: 2px;
   }
-}
-
-.toggleLink {
-color: #999999;
-font-size: 10px;
-text-decoration: none;
-display: block;
-float: right;
-margin-right: 2%
-}
-
-#sidebar .toggleLink:hover {
-color: #77BACE;
-text-decoration: none;
-}
-
-#sidebar ul {
-clear: both;
-margin: 0; padding: 0;
-}
-
-#sidebar li {
-list-style: none;
-margin: 0 0 0 12%; padding: 0;
-}
-
-#sidebar li a {
-color: #666666;
-padding-left: 25px;
-text-decoration: none;
-display: inline-block;
-height: 17px;
-line-height: 17px;
-text-shadow: 0 1px 0 #fff;
-margin: 2px 0;
+  ul {
+    clear: both;
+    margin: 0; padding: 0;
+    
+    li {
+      list-style: square inside;
+      margin: 0 0 0 6%; padding: 0 0 0 9px;
+      
+      a {
+        color: #333;
+        padding-left: 2px;
+        text-decoration: none;
+        display: inline-block;
+        height: 17px;
+        line-height: 17px;
+        text-shadow: 0 1px 0 #fff;
+        margin: 2px 0;
+        
+        &:hover {
+        }
+      }
+    }
+  }
+  
+  form li {
+    list-style:none;
+    padding:0;
+  }
 }
 
 #sidebar li a:hover {
