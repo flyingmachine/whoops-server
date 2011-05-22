@@ -2,4 +2,4 @@
   - event.details.to_a.sort{|a,b| a[0] <=> b[0]}.each do |detail|
     %tr
       %td.label= detail.first
-      %td= format_detail(detail.last)
+      %td.value= format_detail(detail.last)

@@ -20,10 +20,9 @@
     %section#secondary_bar
       .user
       .breadcrumbs_container
-        %article.breadcrumbs/
-        %a{:href => "index.html"} Website Admin
-        .breadcrumb_divider
-        %a.current Dashboard
+        %article.breadcrumbs
+          = link_to "All Events", root_path, :class => ("current" if controller_name == 'event_groups')
+          = yield :breadcrumbs
     / end of secondary bar
     %aside#sidebar.column
       = yield :sidebar

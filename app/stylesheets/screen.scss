@@ -922,6 +922,11 @@ font-size: 14px;}
     vertical-align:top;
   }
   
+  td.value {
+    white-space:nowrap;
+    overflow-x:auto;
+  }
+  
   ul {
     list-style:none;
     margin:0;

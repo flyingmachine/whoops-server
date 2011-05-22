@@ -1,3 +1,6 @@
+- content_for :breadcrumbs do
+  = breadcrumbs(["Event Details", whoops_event_group_path(@event_group)])
+  
 - content_for :sidebar do
   %h3 Instances
   = will_paginate @event, :previous_label => "", :next_label => ""

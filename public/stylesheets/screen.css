@@ -1057,17 +1057,22 @@ fieldset textarea:focus {
   vertical-align: top;
 }
 /* line 925, ../../app/stylesheets/screen.scss */
+#main table td.value {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+/* line 930, ../../app/stylesheets/screen.scss */
 #main table ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 929, ../../app/stylesheets/screen.scss */
+/* line 934, ../../app/stylesheets/screen.scss */
 #main table ul li {
   margin: 0;
   padding: 0;
 }
-/* line 933, ../../app/stylesheets/screen.scss */
+/* line 938, ../../app/stylesheets/screen.scss */
 #main table ul li ul {
   margin-left: 5px;
 }
