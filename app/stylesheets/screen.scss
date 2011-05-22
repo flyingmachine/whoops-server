@@ -7,12 +7,13 @@ html, div, map, dt, isindex, form, header, aside, section, section, article, foo
 } 
 
 html, body {
-height: 100%;
-margin: 0;
-padding: 0;
-font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-background: #F8F8F8;
-font-size: 12px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  background: #F8F8F8;
+  font-size: 12px;
+  line-height:1.6em;
 }
 
 .clear {
@@ -300,10 +301,10 @@ text-decoration: none;
         display: inline-block;
         height: 17px;
         line-height: 17px;
-        text-shadow: 0 1px 0 #fff;
         margin: 2px 0;
         
-        &:hover {
+        &:visited {
+          color:#2e3192;
         }
       }
     }
